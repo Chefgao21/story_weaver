@@ -145,7 +145,7 @@ A specific instruction tells the model to correct user input that contradicts es
 
 **Problem: Sometimes the model would slightly go along with user inputs even if they contradicts established facts.**
 
-To test the memory of the model, I first gave it a prompt where I established that the main character was blind. Approximately 8 turns later, I entered a prompt where I said that the main character held up a candle to see a painting. This is an obvious contradiction since the blind character has no use for a lamp. Ideally, the model would work around this by reframing the action. However, the response was "the candle's flame danced across Mira's features, Aldric's sightless eyes seemed to bore into its very soul". While this isn't terrible since it still mentions that Aldric is sightless, it still insinuates that the light is helping Aldric get a batter view. 
+To test the memory of the model, I first gave it a prompt where I established that the main character was blind. Approximately 8 turns later, I entered a prompt where I said that the main character held up a candle to see a painting. This is an obvious contradiction since the blind character has no use for a lamp. Ideally, the model would work around this by reframing the action. However, the response was "the candle's flame danced across Mira's features, Aldric's sightless eyes seemed to bore into its very soul". While this isn't terrible since it still mentions that Aldric is sightless, it still insinuates that the light is helping Aldric get a better view. 
 
 **What I changed:**
 
