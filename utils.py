@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-# ── Groq client ───────────────────────────────────────────────────────────────
+# Groq client 
 
 def get_client() -> Groq:
     api_key = os.getenv("GROQ_API_KEY")
@@ -75,7 +75,7 @@ def call_llm(
     return None
 
 
-# ── Story helpers ─────────────────────────────────────────────────────────────
+# Story helpers 
 
 def get_full_story_text(turns: list) -> str:
     """Concatenate all story turns into one narrative string."""
@@ -102,7 +102,7 @@ def parse_json_response(text: str) -> Optional[any]:
     return None
 
 
-# ── Story bible ───────────────────────────────────────────────────────────────
+# Story bible 
 
 def maybe_update_story_bible(turns: list) -> dict:
     """
@@ -144,7 +144,7 @@ def maybe_update_story_bible(turns: list) -> dict:
     return st.session_state.get("story_bible", {})
 
 
-# ── Export ────────────────────────────────────────────────────────────────────
+# Export 
 
 def export_markdown(
     title: str,
