@@ -157,8 +157,8 @@ When testing the model again, it was less agreeable and would firmly stick to es
 
 ## What I Would Improve With Another Day
 
-**better management for longer stories**
+**Dynamic character state tracking**
 The current character registry only appends new characters but never updates old ones. This means by turn 20, the system prompt might tell the model that a character is "a mysterious traveler with unknown motives" when the story already revealed them as a traitor. With another day I would create a character state object that tracks current emotional state, key relationships, and recent significant actions. This would make the character injection in the system prompt a better representation of who each character is right now, not just who they were when they were first introduced.
 
-**Dynamic character state tracking**
+**better management for longer stories**
 Right now the app sends the full story text on every single call. Groq's context window for LLaMA 3.3 70B is 128k tokens, and a long collaborative story with detailed prose can burn through that fast. More importantly, even within the context window, models pay significantly less attention to content in the middle of a long input. With another day I'd replace the full-story dump with a sliding window plus summary approach. I would always include the last 4-5 turns verbatim and replace everything before that with a rolling prose summary. This would not be the structured bible, but a flowing 300-word narrative recap that reads like the "previously on..." of a TV show. This keeps the token count bounded no matter how long the story gets, and actually puts the most important content in the beginning and end of the context positions. 
